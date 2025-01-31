@@ -1,128 +1,157 @@
-import * as React from "react"
+import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
+import { Clock, Calendar, Users, BarChart } from "react-feather"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import * as styles from "./index.module.css"
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    <Seo title="Home" />
+    <section className={styles.hero}>
+      <div className="container flex flex-end">
+        <div className={styles.heroContent + " flex flex-end"}>
+            <h1 className={styles.heroTitle}>Move with <span className="text-primary">less pain</span></h1>
+            {/* <p className={styles.heroSubtitle}>
+              ... with an app so simple even your grandma can use it.
+            </p>
+            <Link to="#" className="button button-primary">
+              GET STARTED
+            </Link>
+          <div className={styles.heroImage}>
+            <StaticImage
+              src="../images/squat.jpg"
+              alt="Person wearing glasses"
+              placeholder="blurred"
+              layout="fixed"
+              width={300}
+              height={300}
+            />
+          </div> */}
+        </div>
+      </div>
+    </section>
+
+    <section className={styles.mission}>
+      <div className="container">
+        <h2 className={styles.missionTitle}>
+          pain-free joints
+          <br /> <span className="text-background">for everyone</span>
+        </h2>
+        <p className={styles.missionText}>
+          We're solving an expensive problem — joint pain — with an affordable solution — AI technology.
+        </p>
+        <Link to="#" className="button button-primary">
+          READ MEMO
+        </Link>
+      </div>
+    </section>
+
+    {/* <section className={styles.features}>
+      <div className="container">
+        <h3 className={styles.featuresTitle}>REVOLUTIONIZING VISION CARE ACCESS</h3>
+        <div className={styles.featureGrid}>
+          {[
+            {
+              Icon: Clock,
+              title: "ALWAYS-ON",
+              description:
+                "We don't believe in business hours. Get your vision test any time and get the right care when you need it.",
+            },
+            {
+              Icon: Calendar,
+              title: "NO SCHEDULING, NO PLANNING",
+              description:
+                "Schedule-free vision care means you can access tests at higher frequencies and get real-time data about your vision.",
+            },
+            {
+              Icon: Users,
+              title: "NO SPECIALIZED STAFFING REQUIRED",
+              description:
+                "Eyebot eliminates the need for specialized staffing, reducing operational costs while maintaining quality.",
+            },
+            {
+              Icon: BarChart,
+              title: "UNMATCHED THROUGHPUT",
+              description:
+                "Traditional exam lanes test a maximum of 12 patients in a day — Eyebot machines deliver over 100 exams per day.",
+            },
+          ].map(({ Icon, title, description }, index) => (
+            <div key={index} className={styles.featureItem}>
+              <Icon className={styles.featureIcon} />
+              <h4 className={styles.featureTitle}>{title}</h4>
+              <p className={styles.featureDescription}>{description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section> */}
+
+    {/* <section className={styles.partners}>
+      <div className="container">
+        <div className={styles.partnerGrid}>
+          <StaticImage
+            src="../images/person-wearing-glasses-2.jpg"
+            alt="Person wearing glasses"
+            width={500}
+            height={600}
+            className="rounded-lg"
+          />
+          <div>
+            <div className="flex items-center gap-4 mb-6">
+              <StaticImage
+                src="../images/partner-logo.png"
+                alt="Partner logo"
+                width={100}
+                height={40}
+                className="object-contain"
+              />
+              <span className="text-xl">×</span>
+              <StaticImage
+                src="../images/eyebot-logo.png"
+                alt="Eyebot logo"
+                width={100}
+                height={40}
+                className="object-contain"
+              />
+            </div>
+            <h2 className={styles.partnerTitle}>FROM VISION TEST TO GLASSES PURCHASE IN MINUTES</h2>
+            <p className={styles.partnerText}>
+              Working with leading optical retailers and eyewear brands, we connect test results to inventory directly.
+              After completing a vision test, customers can immediately browse available frames and place their order.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section> */}
+
+    {/* <section className={styles.technology}>
+      <div className="container">
+        <div className={styles.technologyGrid}>
+          <div>
+            <h2 className={styles.technologyTitle}>FAST. EASY. ACCURATE.</h2>
+            <p className={styles.technologyText}>
+              Our revolutionary standardized vision testing method brings clinical-grade accuracy to automated testing.
+              The patented process ensures consistent results across all testing conditions, making vision care more
+              accessible.
+            </p>
+            <Link to="#" className="button button-primary">
+              VIEW TECHNOLOGY
+            </Link>
+          </div>
+          <StaticImage
+            src="../images/eye-diagram.jpg"
+            alt="Eye diagram"
+            width={500}
+            height={500}
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+    </section> */}
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
-
 export default IndexPage
+
