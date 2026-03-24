@@ -3,19 +3,19 @@ img {
 }
 
 .hero {
-  padding: 80px 0;
+  padding: 60px 0;
   background-image: url('../images/squat.jpg');
-  background-position: 42% center;
+  background-position: 42% bottom;
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh;
 }
 
 .heroContent {
   display: flex;
   align-items: flex-end;
-  color: var(--color-secondary);
+  color: var(--primary-400);
   flex-direction: column;
   flex-wrap: wrap;
   line-height: 1;
@@ -35,7 +35,7 @@ img {
 
 .heroTitle .text-primary {
   color: var(--color-primary);
-  -webkit-text-stroke: .5px var(--color-secondary);
+  -webkit-text-stroke: .5px var(--primary-400);
 }
 
 .heroSubtitle {
@@ -49,10 +49,9 @@ img {
 }
 
 .mission {
-  background-color: #DADEDD;  /* color: var(--color-background); */
-  padding: 80px 0;
+  background-color: var(--primary-600);
+  padding: 32px 0;
   text-align: center;
-  border-top: 2px #C9BCAD solid;
 }
 
 .missionTitle {
@@ -60,17 +59,18 @@ img {
   font-weight: bold;
   margin-bottom: 20px;
   text-transform: uppercase;
-  color: var(--color-primary);
+  color: var(--primary-200);
 }
 
 .missionText {
   font-size: 1.2rem;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  color: var(--primary-100);
 }
 
 .features {
   padding: 80px 0;
-  background-color: #f8f8f8;
+  background-color: var(--primary-50);
 }
 
 .featuresTitle {
@@ -105,11 +105,103 @@ img {
 
 .featureDescription {
   font-size: 1rem;
-  color: #666;
+  color: var(--muted-foreground);
 }
 
-.footerTitle {
-  text-transform: uppercase;
+/* --------------------------------------------------------------------------
+   Email Signup Section
+   -------------------------------------------------------------------------- */
+.signupSection {
+  padding: 32px 0;
+  text-align: center;
+  background-color: var(--primary-50);
+  border-top: 2px solid var(--primary-200);
 }
-/* Add more styles for other sections as needed */
+
+.signup {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.signupHeading {
+  font-family: "Geist", var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.0375rem;
+  color: var(--primary-950);
+  margin-bottom: 8px;
+}
+
+.signupText {
+  font-size: 1rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--space-4);
+}
+
+.signupForm {
+  display: flex;
+  gap: 8px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signupInput {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid var(--primary-200);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-family: var(--font-sans);
+  color: var(--primary-950);
+  background: var(--color-background);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.signupInput:focus {
+  border-color: var(--primary-400);
+}
+
+.signupInput::placeholder {
+  color: var(--primary-300);
+}
+
+.signupButton {
+  padding: 12px 24px;
+  background-color: var(--primary-600);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.signupButton:hover {
+  background-color: var(--primary-500);
+}
+
+.signupButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.signupSuccess {
+  color: var(--secondary-600);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 40rem) {
+  .signupForm {
+    flex-direction: column;
+  }
+
+  .signupButton {
+    width: 100%;
+  }
+}
 
