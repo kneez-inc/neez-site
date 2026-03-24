@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Why neez? Page Styles
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+.heroSection {
+  padding: var(--space-16) 0 var(--space-8);
+  text-align: center;
+  background-color: var(--primary-50);
+}
+
+.pageTitle {
+  font-family: "Geist", var(--font-sans);
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: -0.075rem;
+  line-height: 1;
+  color: var(--primary-950);
+  margin-bottom: var(--space-2);
+}
+
+.pageSubtitle {
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--primary-600);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Content
+   -------------------------------------------------------------------------- */
+.contentSection {
+  padding: var(--space-12) 0 var(--space-16);
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Summary
+   -------------------------------------------------------------------------- */
+.summary {
+  margin-bottom: var(--space-12);
+  padding: var(--space-5) var(--space-4);
+  background-color: var(--primary-50);
+  border-left: 4px solid var(--primary-600);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+.summaryText {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--primary-950);
+  max-width: none;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Content Blocks
+   -------------------------------------------------------------------------- */
+.block {
+  margin-bottom: var(--space-12);
+}
+
+.blockTitle {
+  font-family: "Geist", var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.0375rem;
+  color: var(--primary-950);
+  margin-bottom: var(--space-4);
+}
+
+/* --------------------------------------------------------------------------
+   Card Grid
+   -------------------------------------------------------------------------- */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.card {
+  padding: var(--space-4);
+  background-color: var(--color-background);
+  border: 1px solid var(--primary-200);
+  border-radius: var(--radius-2xl);
+}
+
+.cardHighlight {
+  padding: var(--space-4);
+  background-color: var(--primary-600);
+  border-radius: var(--radius-2xl);
+  color: white;
+}
+
+.cardHighlight .cardTitle {
+  color: white;
+}
+
+.cardHighlight .cardText {
+  color: var(--primary-100);
+}
+
+.cardTitle {
+  font-family: "Geist", var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-950);
+  margin-bottom: 8px;
+}
+
+.cardText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  max-width: none;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Roadmap
+   -------------------------------------------------------------------------- */
+.roadmap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.roadmapItem {
+  display: flex;
+  gap: var(--space-3);
+  align-items: baseline;
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-background);
+  border: 1px solid var(--primary-200);
+  border-radius: var(--radius-2xl);
+}
+
+.phase {
+  font-family: "Geist", var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-600);
+  white-space: nowrap;
+  padding: 4px 12px;
+  background-color: var(--primary-50);
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+.roadmapText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  max-width: none;
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — Tablet
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 80rem) {
+  .pageTitle {
+    font-size: 2.25rem;
+    font-weight: 600;
+    letter-spacing: -0.05625rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Responsive — Mobile
+   -------------------------------------------------------------------------- */
+@media screen and (max-width: 40rem) {
+  .heroSection {
+    padding: var(--space-8) 0 var(--space-4);
+  }
+
+  .contentSection {
+    padding: var(--space-5) 0 var(--space-8);
+  }
+
+  .pageTitle {
+    font-size: 1.875rem;
+    letter-spacing: -0.04688rem;
+  }
+
+  .cardGrid,
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmapItem {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

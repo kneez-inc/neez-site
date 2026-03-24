@@ -1,17 +1,320 @@
+/* ==========================================================================
+   neez Design System — Global Tokens & Utilities
+   Source: Figma Neez-Production (extracted 2026-03-23)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Semantic Color Tokens (Light Mode)
+   -------------------------------------------------------------------------- */
 :root {
-  --color-primary: #985856;
-  --color-secondary: #C1888A; /* #542c85, 639*/ 
-  --color-text: #333333;
+  /* Primary (Au Chico — warm earthy terracotta) */
+  --primary: oklch(0.533 0.085 22.218);
+  --primary-foreground: oklch(1 0 0);
+  --primary-muted: oklch(0.982 0.004 17.23);
+
+  /* Secondary (Sushi — fresh vibrant green) */
+  --secondary: oklch(0.951 0.038 111.919);
+  --secondary-foreground: oklch(0.379 0.061 121.244);
+
+  /* Tertiary (Mulled Wine — deep sophisticated purple) */
+  --tertiary: oklch(0.6 0.101 293.396);
+
+  /* Surfaces */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.261 0.04 17.569);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.261 0.04 17.569);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.147 0.004 49.25);
+  --muted: oklch(0.97 0.001 106.424);
+  --muted-foreground: oklch(0.444 0.01 73.639);
+  --accent: oklch(0.958 0.008 17.288);
+  --accent-foreground: oklch(0.394 0.061 17.253);
+
+  /* Form & Interactive */
+  --border: oklch(0.915 0.017 26.655);
+  --input: oklch(0.923 0.003 48.717);
+  --ring: oklch(0.752 0.054 25.739);
+
+  /* Status */
+  --destructive: oklch(0.577 0.215 27.325);
+  --destructive-foreground: oklch(0.971 0.013 17.38);
+  --warning: oklch(0.962 0.058 95.617);
+  --warning-foreground: oklch(0.279 0.074 45.635);
+
+  /* Chat */
+  --chat-foreground: oklch(0.394 0.061 17.253);
+  --chat-incoming: oklch(0.958 0.008 17.288);
+  --chat-outgoing: oklch(0.985 0.001 106.424);
+
+  /* --------------------------------------------------------------------------
+     2. Primary Palette Scale (Au Chico)
+     -------------------------------------------------------------------------- */
+  --primary-50: #FCF8F8;
+  --primary-100: #F6EFEF;
+  --primary-200: #EEDFDD;
+  --primary-300: #E0C6C1;
+  --primary-400: #CFA29D;
+  --primary-500: #BA7E79;
+  --primary-600: #985856;
+  --primary-700: #874949;
+  --primary-800: #723F40;
+  --primary-900: #63383A;
+  --primary-950: #351C1D;
+
+  /* --------------------------------------------------------------------------
+     3. Secondary Palette Scale (Sushi)
+     -------------------------------------------------------------------------- */
+  --secondary-50: #F8F9EC;
+  --secondary-100: #EFF2D5;
+  --secondary-200: #DFE7AF;
+  --secondary-300: #C8D680;
+  --secondary-400: #B2C358;
+  --secondary-500: #99AE3C;
+  --secondary-600: #73852B;
+  --secondary-700: #586625;
+  --secondary-800: #475222;
+  --secondary-900: #3D4720;
+  --secondary-950: #1F260D;
+
+  /* --------------------------------------------------------------------------
+     4. Tertiary Palette Scale (Mulled Wine)
+     -------------------------------------------------------------------------- */
+  --tertiary-50: #F3F4FA;
+  --tertiary-100: #E9EAF6;
+  --tertiary-200: #D7D7EE;
+  --tertiary-300: #BEBEE3;
+  --tertiary-400: #A7A3D6;
+  --tertiary-500: #958CC8;
+  --tertiary-600: #8374B7;
+  --tertiary-700: #7262A0;
+  --tertiary-800: #5D5182;
+  --tertiary-900: #534B71;
+  --tertiary-950: #2D293D;
+
+  /* --------------------------------------------------------------------------
+     5. Typography
+     -------------------------------------------------------------------------- */
+  --font-sans: "SF Pro", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-serif: "New York", Georgia, "Times New Roman", serif;
+  --font-mono: "SF Mono", SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+
+  --font-lg: 18px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+
+  /* --------------------------------------------------------------------------
+     6. Spacing
+     -------------------------------------------------------------------------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+
+  /* --------------------------------------------------------------------------
+     7. Border Radius
+     -------------------------------------------------------------------------- */
+  --border-radius: 4px;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.625rem;
+  --radius-xl: 0.875rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-4xl: 2rem;
+
+  /* --------------------------------------------------------------------------
+     8. Backward-Compatible Aliases
+     Map old token names used in layout.css / index.module.css / components
+     -------------------------------------------------------------------------- */
+  --color-primary: var(--primary-600);
+  --color-secondary: var(--primary-400);
+  --color-text: var(--primary-950);
   --color-background: #ffffff;
+  --color-code-bg: #fff4db;
+  --color-code: #8a6534;
 }
 
+/* --------------------------------------------------------------------------
+   9. Dark Mode Tokens
+   -------------------------------------------------------------------------- */
+.dark {
+  --primary: oklch(0.653 0.076 24.614);
+  --primary-foreground: oklch(0.261 0.04 17.569);
+  --primary-muted: oklch(0.394 0.061 17.253);
+  --background: oklch(0.147 0.004 49.25);
+  --foreground: oklch(0.982 0.004 17.23);
+  --accent: oklch(0.48 0.084 20.674);
+  --accent-foreground: oklch(0.982 0.004 17.23);
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.15);
+  --muted: oklch(0.268 0.006 34.297);
+  --muted-foreground: oklch(0.716 0.009 56.259);
+  --secondary: oklch(0.417 0.072 120.338);
+  --secondary-foreground: oklch(0.978 0.017 110.277);
+  --tertiary: oklch(0.538 0.096 294.819);
+  --destructive: oklch(0.711 0.166 22.216);
+  --destructive-foreground: oklch(0.971 0.013 17.38);
+  --ring: oklch(0.653 0.076 24.614);
+  --card: oklch(0.216 0.006 56.043);
+  --card-foreground: oklch(0.982 0.004 17.23);
+  --popover: oklch(0.268 0.006 34.297);
+  --popover-foreground: oklch(0.985 0.001 106.424);
+  --warning: oklch(0.962 0.058 95.617);
+  --warning-foreground: oklch(0.279 0.074 45.635);
+  --chat-foreground: oklch(0.985 0.001 106.424);
+  --chat-incoming: oklch(0.653 0.076 24.614);
+  --chat-outgoing: oklch(0.268 0.006 34.297);
+
+  --color-primary: var(--primary-500);
+  --color-secondary: var(--primary-400);
+  --color-text: #f5f5f4;
+  --color-background: #0c0a09;
+}
+
+/* --------------------------------------------------------------------------
+   10. Heading Classes (Geist font, responsive)
+   -------------------------------------------------------------------------- */
+.heading-xl {
+  font-family: "Geist", var(--font-sans);
+  font-size: 3.75rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.09375rem;
+}
+
+.heading-lg {
+  font-family: "Geist", var(--font-sans);
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.075rem;
+}
+
+.heading-md {
+  font-family: "Geist", var(--font-sans);
+  font-size: 2.25rem;
+  line-height: 1.11;
+  font-weight: 600;
+  letter-spacing: -0.05625rem;
+}
+
+.heading-sm {
+  font-family: "Geist", var(--font-sans);
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: 600;
+  letter-spacing: -0.0375rem;
+}
+
+@media screen and (max-width: 80rem) {
+  .heading-xl {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.075rem;
+  }
+
+  .heading-lg {
+    font-size: 2.25rem;
+    line-height: 1.11;
+    font-weight: 600;
+    letter-spacing: -0.05625rem;
+  }
+
+  .heading-md {
+    font-size: 1.875rem;
+    line-height: 1.2;
+    letter-spacing: -0.04688rem;
+  }
+
+  .heading-sm {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    letter-spacing: -0.03125rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   11. Layout Utilities (responsive)
+   -------------------------------------------------------------------------- */
+.container-padding-x {
+  padding-inline: 1.5rem;
+}
+
+.section-padding-y {
+  padding-block: 8rem;
+}
+
+.section-title-gap-xl {
+  gap: 1.5rem;
+}
+
+.section-title-gap-lg {
+  gap: 1.25rem;
+}
+
+.section-title-gap-md {
+  gap: 1.25rem;
+}
+
+.section-title-gap-sm {
+  gap: 1rem;
+}
+
+@media screen and (max-width: 80rem) {
+  .container-padding-x {
+    padding-inline: 1rem;
+  }
+
+  .section-padding-y {
+    padding-block: 4rem;
+  }
+
+  .section-title-gap-xl {
+    gap: 1.25rem;
+  }
+
+  .section-title-gap-lg {
+    gap: 1rem;
+  }
+
+  .section-title-gap-md {
+    gap: 1rem;
+  }
+
+  .section-title-gap-sm {
+    gap: 1rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. Base Styles
+   -------------------------------------------------------------------------- */
 .text-background {
   color: var(--color-background);
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: var(--font-sans);
   color: var(--color-text);
   background-color: var(--color-background);
   margin: 0;
@@ -20,10 +323,13 @@ body {
 
 img {
   image-rendering: crisp-edges;
-  max-width: 100%; /* Ensures the image doesn't scale beyond its original size */
+  max-width: 100%;
   height: auto;
 }
 
+/* --------------------------------------------------------------------------
+   13. Utility Classes
+   -------------------------------------------------------------------------- */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -49,6 +355,9 @@ img {
   flex-wrap: wrap;
 }
 
+/* --------------------------------------------------------------------------
+   14. Button Components
+   -------------------------------------------------------------------------- */
 .button {
   display: inline-block;
   padding: 10px 20px;
@@ -63,16 +372,8 @@ img {
   color: white;
 }
 
-.text-primary {
-  color: var(--color-primary);
-}
-
-.text-secondary {
-  color: var(--color-secondary);
-}
-
 .button-primary:hover {
-  background-color: lighten(var(--color-primary), 10%);
+  background-color: var(--primary-500);
 }
 
 .button-secondary {
@@ -82,6 +383,26 @@ img {
 }
 
 .button-secondary:hover {
-  background-color: lighten(var(--color-primary), 10%);
+  background-color: var(--primary-500);
 }
 
+.button-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--primary-500);
+}
+
+.button-outline:hover {
+  background-color: var(--primary-50);
+}
+
+/* --------------------------------------------------------------------------
+   15. Text Utilities
+   -------------------------------------------------------------------------- */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
