@@ -41,7 +41,7 @@ const TeamPage = () => (
   <Layout>
     <Seo
       title="Team"
-      description="Meet the team behind neez \u2014 trainers, data scientists, designers, doctors, and therapists building AI-powered knee care."
+      description="An orthopedic doctor, physical therapist, personal trainer, data scientist, and a designer building AI-powered knee care."
     />
 
     <section className={styles.teamHero}>
@@ -162,7 +162,7 @@ const TeamPage = () => (
             </div>
           </div>
 
-          {/* Wolfram Arnold */}
+          {/* Wolfram Arnold — uncomment when ready to publish
           <div className={styles.teamCard}>
             <div className={styles.imageWrapper}>
               <StaticImage
@@ -182,6 +182,7 @@ const TeamPage = () => (
               <p className={styles.memberBio}>{teamMembers[5].bio}</p>
             </div>
           </div>
+          */}
         </div>
       </div>
     </section>
