@@ -81,11 +81,7 @@ const IndexPage = () => (
           <br /> <span className="text-background">for everyone</span>
         </h2>
         <p className={styles.missionText}>
-          neez is a free, ad-supported mobile app that tackles knee (and other
-          joint) pain. Users simply talk to the app to receive movement
-          modifications for immediate pain relief. Then, they follow
-          personalized exercises and stretching routines to enjoy life with less
-          joint pain.
+          neez is a free app that tackles knee pain
         </p>
       </div>
     </section>
