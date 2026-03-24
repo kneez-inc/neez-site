@@ -48,8 +48,9 @@ const TeamPage = () => (
       <div className="container">
         <h1 className={styles.teamHeading}>Our Team</h1>
         <p className={styles.teamSubheading}>
-          Trainers, data scientists, designers, doctors, and therapists
-          — united by a mission to make joint care accessible to everyone.
+          An orthopedic doctor, physical therapist, personal trainer,
+          data scientist, and a designer — united by a mission to make
+          joint care accessible to everyone.
         </p>
       </div>
     </section>
