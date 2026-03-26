@@ -26,9 +26,9 @@ const teamMembers = [
     bio: "Dr. Chang is a board-certified orthopedic surgeon specializing in sports medicine, with a deep commitment to conservative care and injury prevention \u2014 a philosophy that aligns directly with neez\u2019s mission. A Stanford graduate who completed his orthopedic surgery training at Wake Forest, he has covered professional teams including the Oakland Ballers, U.S. Soccer National Teams, and MLS clubs. He is the founder of Bay Area Sports Orthopaedics (BASO) and brings clinical rigor and credibility to every recommendation neez delivers.",
   },
   {
-    name: "Juliana Evans-Anfom",
+    name: "Jules Evans-Anfom",
     role: "Physical Therapy Advisor",
-    bio: "Juliana is a physical therapist who brings the clinical perspective that keeps neez grounded in real patient needs. With a DPT from UC San Francisco, she understands the pain points \u2014 both literal and logistical \u2014 that clinicians and patients face with digital health tools. Her background in iterative treatment planning and user-centered care helps neez bridge the gap between what technology can do and what people in pain actually need.",
+    bio: "Jules is a physical therapist who brings the clinical perspective that keeps neez grounded in real patient needs. With a DPT from UC San Francisco/San Francisco State University, she understands the pain points \u2014 both literal and logistical \u2014 that clinicians and patients face with digital health tools. Her background in iterative treatment planning and user-centered care helps neez bridge the gap between what technology can do and what people in pain actually need.",
   },
   {
     name: "Wolfram Arnold",
@@ -142,12 +142,12 @@ const TeamPage = () => (
             </div>
           </div>
 
-          {/* Juliana Evans-Anfom */}
+          {/* Jules Evans-Anfom */}
           <div className={styles.teamCard}>
             <div className={styles.imageWrapper}>
               <StaticImage
                 src="../images/team/Jules.jpg"
-                alt="Juliana Evans-Anfom"
+                alt="Jules Evans-Anfom"
                 placeholder="blurred"
                 layout="constrained"
                 width={120}
